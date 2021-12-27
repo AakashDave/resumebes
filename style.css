@@ -203,7 +203,7 @@ h3,label{
 /* media */
 @media only screen and (max-width:800px) {
     #home{
-        margin-top: 70px;
+        margin-top: 30px;
         display: flex;
         height: 100vh;
         flex-direction: column;
