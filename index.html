@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Resumebes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  </head>
+  <body>   
+
+    <nav id="navbar" class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <div class="box">
+        <a class="navbar-brand text-dark" href="#">RESUME<sub class="text-secondary">bes</sub>  </a>
+      </div>
+      
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">   
+            <i class="fa fa-navicon" style="color:#db9a6e; font-size:28px;"></i>
+        </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home" class="container">
+      <div class="marketing">
+        <img src="/img/snowflake.png" alt=""> <br>
+        <h1 class="text-dark">RESUME<sub class="text-secondary">bes</sub></h1>
+        <p>Forget spending hours formatting your resume</p>
+        <p>Creating a resume online with Resumebes free resume builder will give you a sleek and attractive resume, without the fuss.</p>
+        <button class="homebtn" onclick="openedit()">Create Here + </button> <br>
+        <img src="img/snowflake.png" alt="">
+      </div>
+      <div class="img">
+        <img src="/img/design 1.png" alt="design">
+      </div>
+    </section>
+    
+    <!-- form part -->
+    <section  id="cvform" class="mycontainer">
+      <div class="container flex-display">
+        <div data-aos="fade-right" class="personalpart">
+          <h3>PERSONAL INFO.</h3>
+          <div class="form-group">
+            <div class="hoveffect">
+            <label for="namefield">Your Name</label>
+            <input type="text" class="form-control" name="namefield" id="namefield" placeholder="Enter Your name"></div>
+            <div class="hoveffect">
+            <label for="phonefield">Your Contact no.</label>
+            <input type="text" class="form-control" name="phonefield" id="phonefield" placeholder="Enter Your mobile no."></div>
+            <div class="hoveffect">
+            <label for="emailfield">Your Email</label>
+            <input type="text" class="form-control" name="emailfield" id="emailfield" placeholder="Enter Your Email."></div>
+            <div class="hoveffect">
+            <label for="emailfield">Your Birth Date</label>
+            <input type="date" class="form-control" name="bdfield" id="bdfield">
+          </div>
+          <div class="hoveffect">
+            <label for="address">your address</label>
+            <textarea name="address" id="address" class="form-control" placeholder="Enter here"></textarea>
+          </div>
+          </div>
+
+          <h3 class="my-3">Social media Links</h3>
+          <div class="form-group linksec" novalidate>
+            <div class="hoveffect">
+            <label for="fblink">FaceBook</label>
+            <input type="url" class="form-control" name="fblink" id="fblink" placeholder="http://www.facebook.com/username">
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="hoveffect">
+            <label for="instalink">Instagram</label>
+            <input type="url" class="form-control" name="instalink" id="instalink" placeholder="http://www.instagram.com/username">
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="hoveffect">
+            <label for="linkedlink">Linkedin</label>
+            <input type="url" class="form-control" name="linkedlink" id="linkedlink" placeholder="http://www.linkedin.com/in/username">
+          </div>
+          <div class="hoveffect">
+            <label for="gitlink">Github</label>
+            <input type="url" class="form-control" name="gitlink" id="gitlink" placeholder="http://www.github.com/....">
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          </div>
+        </div>
+
+
+        <div data-aos="fade-left" class="professionalpart">
+          <h3>PROFESSIONAL INFO.</h3>
+          <div class="hoveffect">
+          <label for="objfield">Objective</label>
+            <textarea name="objfield" id="objfield" class="form-control " placeholder="Enter here"></textarea>
+          </div>
+        <div id="workexp">
+          <label for="wrkExpfield">Work Experience/Projects</label>
+            <textarea name="wrkExpfield" id="wrkExpfield" class="form-control wrkExpfield hoveffect" placeholder="Enter here"></textarea>
+            <!-- new add here -->
+            <div id="weaddbtn" class="container text-center">
+              <button  onclick="addwefield()" class="btn btn-sm my-3">+</button>
+            </div>
+            </div>
+
+          <div  id="acadqal">
+            <label for="qualfield">Academic Qualification</label>
+            <textarea name="qualfield" id="qualfield" class="form-control qualfield hoveffect" placeholder="Enter here"></textarea>
+            <div id="aqaddbtn" class="container text-center">
+              <button  onclick="addacfield()" class="btn btn-sm my-3">+</button>
+            </div>
+          </div>
+
+          <div  id="skill">
+            <label for="skfield">Skills</label>
+            <textarea name="skfield" id="skfield" class="form-control skfield hoveffect" placeholder="Enter here"></textarea>
+            <div id="skaddbtn" class="container text-center">
+              <button  onclick="addskfield()" class="btn btn-sm my-3">+</button>
+            </div>
+          </div>
+          <!-- Hobbies -->
+          <div  id="hb">
+            <label for="hbfield">Hobbies / Interests</label>
+            <textarea name="hbfield" id="hbfield" class="form-control hbfield hoveffect" placeholder="Enter here"></textarea>
+            <div id="hbaddbtn" class="container text-center">
+              <button  onclick="addhbfield()" class="btn btn-sm my-3">+</button>
+            </div>
+          </div>
+
+          <div class="signn hoveffect">
+          <label for="signfield">Your Sign name:</label>
+          <input type="text" class="form-control" name="signfield" id="signfield" placeholder="Enter Your Sign.">
+          </div>
+        </div>
+        <div class="designresume my-3">
+          <h3>Design your Resume</h3>
+          <div class="form-group hoveffect">
+          <label for="bg">choose background:</label>
+          <input type="color" class="form-control" name="bg" id="bg" value="#ffffff">
+            </div>
+          <div class="form-group hoveffect">
+          <label for="bg">choose Profile pic:</label>
+          <input type="file" class="form-control" name="pic" id="pic" >
+            </div>
+        </div>
+        
+      </div>
+      <div class="container text-center my-5">
+        <button onclick="generateCV()" class="btn  btn-lg">generate Cv</button>
+      </div>
+    </section>
+  <!-- CV template -->
+    <section class="container" id="cvtemplate">
+      <h3 class="text-center">Resume</h3>
+      <div class="gridbox">
+        <div id="mybg0" class="personalgrid text-center backg">
+          <img id="imgtemp" src="" alt="" class="applicantimg">
+          <div class="container my-5">
+            <p>Name: <span id="name1"></span></p>
+            <p>Contact: <span id="contact1"></span></p>
+            <p>Email: <span id="email1"></span></p>
+            <p>Birthdate: <span id="bd1"></span></p>
+            <p>Address: <span id="address1"></span></p>
+            <hr>
+            <a id="fb1" href="" class="my-2">facebook</a>
+            <a id="insta1" href=""class="my-2">instagram</a>
+            <a id="link1" href=""class="my-2">LinkedIn</a>
+            <a id="git1" href=""class="my-2">Github</a>
+          </div>
+        </div>
+        <div class="profgrid py-5">
+          <h1 id="name2"></h1>
+          <!-- objective -->
+          <div class="card">
+            <div id="mybg1" class="card-header backg my-2">
+              <h6 >Objective</h6>
+            </div>
+            <div class="card-body">
+              <p id="objt1"></p>
+            </div>
+          </div>
+          <!-- work experience -->
+          <div class="card">
+            <div id="mybg2" class="card-header backg my-2">
+              <h6>Work experience/Projects</h6>
+            </div>
+            <div class="card-body">
+              <ul id="we1">
+                <li>
+                </li>
+              </ul>
+          </div>
+        </div>
+        <!-- acadmic qualification -->
+        <div class="card">
+          <div id="mybg3" class="card-header backg my-2">
+            <h6>Academic Qualification</h6>
+          </div>
+          <div class="card-body">
+            <ul id="aq1">
+              <li></li>
+            </ul>
+        </div>
+      </div>
+      <!-- skills -->
+        <div class="card">
+          <div id="mybg4" class="card-header backg my-2">
+            <h6>Skills</h6>
+          </div>
+          <div class="card-body">
+            <ul id="sk1">
+              <li></li>
+            </ul>
+        </div>
+      </div>
+      <!-- hobbies -->
+        <div class="card">
+          <div id="mybg5" class="card-header backg my-2">
+            <h6>Hobbies/Interests</h6>
+          </div>
+          <div class="card-body">
+            <ul id="hb1">
+              <li></li>
+            </ul>
+        </div>
+      </div>
+      <div class="container my-2">
+        <p class="declare">
+          I hereby declare that all the information mentioned above is free from error to the best of my knowledge and I bear responsibility for any deviation from them at any later stage.</p>
+      </div>
+      <div class="container my-2">
+        <h6 id="sign1" ></h6>
+      </div>
+      </div>
+      </div>
+      <div class="container mt-3 text-center">
+        <button onclick="printCV()" class="btn btn-primary">Print CV</button>
+        <button onclick="edit()" class="btn btn-primary">edit</button>
+      </div>
+    </section>
+  
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--     
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script> -->
+   
+  </body>
+  <script src="script.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</html>
