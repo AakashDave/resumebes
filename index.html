@@ -11,6 +11,7 @@
     <title>Resumebes</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
   <body>   
 
@@ -137,17 +138,11 @@
           <div  id="skill">
             <label for="skfield">Skills</label>
             <textarea name="skfield" id="skfield" class="form-control skfield hoveffect" placeholder="Enter here"></textarea>
-            <div id="skaddbtn" class="container text-center">
-              <button  onclick="addskfield()" class="btn btn-sm my-3">+</button>
-            </div>
           </div>
           <!-- Hobbies -->
           <div  id="hb">
             <label for="hbfield">Hobbies / Interests</label>
             <textarea name="hbfield" id="hbfield" class="form-control hbfield hoveffect" placeholder="Enter here"></textarea>
-            <div id="hbaddbtn" class="container text-center">
-              <button  onclick="addhbfield()" class="btn btn-sm my-3">+</button>
-            </div>
           </div>
 
           <div class="signn hoveffect">
@@ -174,6 +169,7 @@
     </section>
   <!-- CV template -->
     <section class="container" id="cvtemplate">
+      <div id="showcvtemplate">
       <h3 class="text-center">Resume</h3>
       <div class="gridbox">
         <div id="mybg0" class="personalgrid text-center backg">
@@ -195,19 +191,19 @@
           <h1 id="name2"></h1>
           <!-- objective -->
           <div class="card">
-            <div id="mybg1" class="card-header backg my-2">
+            <div id="mybg1" class="backg">
               <h6 >Objective</h6>
             </div>
-            <div class="card-body">
+            <div class="cbody">
               <p id="objt1"></p>
             </div>
           </div>
           <!-- work experience -->
           <div class="card">
-            <div id="mybg2" class="card-header backg my-2">
+            <div id="mybg2" class="backg">
               <h6>Work experience/Projects</h6>
             </div>
-            <div class="card-body">
+            <div class="cbody">
               <ul id="we1">
                 <li>
                 </li>
@@ -216,10 +212,10 @@
         </div>
         <!-- acadmic qualification -->
         <div class="card">
-          <div id="mybg3" class="card-header backg my-2">
+          <div id="mybg3" class="backg">
             <h6>Academic Qualification</h6>
           </div>
-          <div class="card-body">
+          <div class="cbody">
             <ul id="aq1">
               <li></li>
             </ul>
@@ -227,40 +223,38 @@
       </div>
       <!-- skills -->
         <div class="card">
-          <div id="mybg4" class="card-header backg my-2">
+          <div id="mybg4" class="backg">
             <h6>Skills</h6>
           </div>
-          <div class="card-body">
-            <ul id="sk1">
-              <li></li>
-            </ul>
+          <div class="cbody">
+            <p id="sk1"></p>
         </div>
       </div>
       <!-- hobbies -->
         <div class="card">
-          <div id="mybg5" class="card-header backg my-2">
+          <div id="mybg5" class="backg">
             <h6>Hobbies/Interests</h6>
           </div>
-          <div class="card-body">
-            <ul id="hb1">
-              <li></li>
-            </ul>
+          <div class="cbody">
+            <p id="hb1"></p>
         </div>
       </div>
-      <div class="container my-2">
+      <div class="container">
         <p class="declare">
           I hereby declare that all the information mentioned above is free from error to the best of my knowledge and I bear responsibility for any deviation from them at any later stage.</p>
       </div>
-      <div class="container my-2">
+      <div class="container">
         <h6 id="sign1" ></h6>
       </div>
       </div>
       </div>
-      <div class="container mt-3 text-center">
-        <button onclick="printCV()" class="btn btn-primary">Print CV</button>
-        <button onclick="edit()" class="btn btn-primary">edit</button>
-      </div>
+    </div>
+    <div class="container mt-3 text-center">
+      <button id="download" class="btn btn-primary">Download</button>
+      <button onclick="edit()" class="btn btn-primary">edit</button>
+    </div>
     </section>
+    
   
 
     <!-- Optional JavaScript; choose one of the two! -->

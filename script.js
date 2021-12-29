@@ -68,62 +68,6 @@ function addacfield() {
     acadqal.insertBefore(dltbtn,aqaddbtn)
 
 }
-function addskfield() {
-    var audio = new Audio('edit.wav');
-    audio.play();
-    let newnode=document.createElement('textarea');
-    newnode.classList.add('form-control');
-    newnode.classList.add('skfield');
-    newnode.classList.add('hoveffect');
-    newnode.classList.add('mt-2');
-    newnode.setAttribute('placeholder',"Enter Here");
-    let dltbtn= document.createElement('button');
-    dltbtn.classList.add('btn');
-    // dltbtn.classList.add('btn-primary');    
-    dltbtn.classList.add('btn-sm');
-    dltbtn.innerHTML="-";
-    dltbtn.addEventListener('click',()=>{
-        var audio = new Audio('edit.wav');
-        audio.play();
-        newnode.remove();
-        dltbtn.remove()
-        
-    }) 
-    let skaddbtn=document.getElementById('skaddbtn');
-    let skill=document.getElementById('skill');
-    
-    skill.insertBefore(newnode,skaddbtn);
-    skill.insertBefore(dltbtn,skaddbtn);
-
-}
-function addhbfield() {
-    var audio = new Audio('edit.wav');
-    audio.play();
-    let newnode=document.createElement('textarea');
-    newnode.classList.add('form-control');
-    newnode.classList.add('hbfield');
-    newnode.classList.add('hoveffect');
-    newnode.classList.add('mt-2');
-    newnode.setAttribute('placeholder',"Enter Here");
-    let dltbtn= document.createElement('button');
-    dltbtn.classList.add('btn');
-    // dltbtn.classList.add('btn-primary');    
-    dltbtn.classList.add('btn-sm');
-    dltbtn.innerHTML="-";
-    dltbtn.addEventListener('click',()=>{
-        var audio = new Audio('edit.wav');
-        audio.play();
-        newnode.remove();
-        dltbtn.remove()
-        
-    }) 
-    let hbaddbtn=document.getElementById('hbaddbtn');
-    let hb=document.getElementById('hb');
-    
-    hb.insertBefore(newnode,hbaddbtn);
-    hb.insertBefore(dltbtn,hbaddbtn);
-
-}
 
 
 // generating cv
@@ -172,7 +116,7 @@ function generateCV() {
     mybg3.style.backgroundColor=document.getElementById('bg').value;
     mybg4.style.backgroundColor=document.getElementById('bg').value;
     mybg5.style.backgroundColor=document.getElementById('bg').value;
-
+    
     // code for image set
     let file=document.getElementById('pic').files[0];
     if (file==undefined) {
@@ -188,46 +132,19 @@ function generateCV() {
 
     let fblink=document.getElementById('fblink').value;
     let setfb=document.getElementById('fb1');
-    if (fblink=="") {
-        setfb.style.display='none';
-    }
-    else{
-        setfb.setAttribute('href',fblink);
-        setfb.style.display='block';
-    }
+    setfb.innerHTML=fblink;
 
     let instalink=document.getElementById('instalink').value;
     let setig=document.getElementById('insta1');
-    if (instalink=="") {
-        setig.style.display='none';
-    }
-    else{
-        setig.setAttribute('href',instalink);
-        setig.style.display='block';
-
-    }
+    setig.innerHTML=instalink;
 
     let linkedlink=document.getElementById('linkedlink').value;
     let setll=document.getElementById('link1');
-    if (linkedlink=="") {
-        setll.style.display='none';
-    }
-    else{
-        setll.setAttribute('href',linkedlink);
-        setll.style.display='block';
-
-    }
+    setll.innerHTML=linkedlink;
 
     let gitlink=document.getElementById('gitlink').value;
     let setgit=document.getElementById('git1');
-    if (gitlink=="") {
-        setgit.style.display='none';
-    }
-    else{
-        setgit.setAttribute('href',gitlink);
-        setgit.style.display='block';
-
-    }
+    setgit.innerHTML=gitlink;
 
     // objective
     document.getElementById('objt1').innerHTML=document.getElementById('objfield').value;
@@ -246,28 +163,31 @@ function generateCV() {
         mystr+=`<li>${e.value}</li>`;
     }
     document.getElementById('aq1').innerHTML=mystr;
-    // skills
-    let skfield=document.getElementsByClassName('skfield');
-    let mystr1='';
-    for(let e of skfield){
-        mystr1+=`<li>${e.value}</li>`;
-    }
-    document.getElementById('sk1').innerHTML=mystr1;
-
-    // hobbies
-    let hbfield=document.getElementsByClassName('hbfield');
-    let mystr2='';
-    for(let e of hbfield){
-        mystr2+=`<li>${e.value}</li>`;
-    }
-    document.getElementById('hb1').innerHTML=mystr2;
+   //skills
+   document.getElementById('sk1').innerHTML=document.getElementById('skfield').value;
+   //skills
+   document.getElementById('hb1').innerHTML=document.getElementById('hbfield').value;
 }
 
 // printcv
+window.onload =function(){
+        document.getElementById('download').addEventListener('click',()=>{
+        console.log(cvtemplate);
+        let showtemp=document.getElementById('showcvtemplate')
+        var opt = {
+            margin:       [-3,0,-5,0],
+            filename:     'myfile.pdf',
+            image:        { type: 'jpeg', quality: 1 },
+            html2canvas:  { scale: 2,logging:true,dpi:192,letterRendering:true},
+            jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait'},
+          };
+          html2pdf().set(opt).from(showtemp).save();
+    })
+}
+
 function printCV() {
     var audio = new Audio('clicked.wav');
     audio.play();
-    window.print();
 }
 
 // edit

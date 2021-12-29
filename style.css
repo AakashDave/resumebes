@@ -168,9 +168,18 @@ h3,label{
 #cvtemplate a{
     color: black;
 }
+#cvtemplate h6{
+    font-size: 15px;
+}
+#cvtemplate p,#cvtemplate li{
+    font-size: 12px;
+}
 .gridbox p{
     text-transform: capitalize;
     font-weight: bold;
+}
+.profgrid p{
+    font-weight: normal;
 }
 .gridbox p span{
     text-transform: none;
@@ -193,7 +202,7 @@ h3,label{
     border-radius: 50%;
 }
 .declare{
-    font-weight: 500;
+    font-weight: bold;
     font-size: 13px;
 }
 #sign1{
