@@ -175,7 +175,7 @@ window.onload =function(){
         console.log(cvtemplate);
         let showtemp=document.getElementById('showcvtemplate')
         var opt = {
-            margin:       [-3,0,-5,0],
+            margin:       [-2,0,0,0],
             filename:     'myfile.pdf',
             image:        { type: 'jpeg', quality: 1 },
             html2canvas:  { scale: 2,logging:true,dpi:192,letterRendering:true},
