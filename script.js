@@ -173,13 +173,14 @@ function generateCV() {
 window.onload =function(){
         document.getElementById('download').addEventListener('click',()=>{
         console.log(cvtemplate);
-        let showtemp=document.getElementById('showcvtemplate')
+        let showtemp=document.getElementById('showcvtemplate');
+        let nbPages = 1;
         var opt = {
-            margin:       [-3,0,-5,0],
-            filename:     'myfile.pdf',
-            image:        { type: 'jpeg', quality: 1 },
-            html2canvas:  { scale: 2,logging:true,dpi:192,letterRendering:true},
-            jsPDF:        { unit: 'mm', format: 'letter', orientation: 'portrait'},
+            margin: 1,
+            filename: 'myfile.pdf',
+            image: { type: 'jpeg' },
+            html2canvas: { dpi: 192, letterRendering: true, width: 1024, height: 1448 * nbPages },
+            jsPDF: { unit: 'pt', format: 'a4', orientation: 'portrait' }
           };
           html2pdf().set(opt).from(showtemp).save();
     })
