@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://kit.fontawesome.com/c096fa5e26.js" crossorigin="anonymous"></script>
   </head>
   <body>   
 
@@ -23,7 +24,7 @@
       
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon">   
-            <i class="fa fa-navicon" style="color:#db9a6e; font-size:28px;"></i>
+            <i class="fa fa-navicon" style="color: rgb(78, 78, 78); font-size:28px;"></i>
         </span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -32,10 +33,10 @@
               <a class="nav-link" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/">About</a>
+              <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/">Contact</a>
+              <a class="nav-link" onclick="openedit()" href="#">Create</a>
             </li>
           </ul>
         </div>
@@ -56,6 +57,38 @@
       </div>
     </section>
     
+    <section id="about" class="container">
+      <div class="howtouse">
+      <hr>
+      <h3 class="text-center">How To Use</h3>
+      <hr>
+      <div class="list">
+        <ul>
+          <li>It is Totally free so you don't have to Login/Signup for use</li>
+          <li>Go to home Page & click on button 'create here +'</li>
+          <li>After clicking on that button one interrface will be open in which you have to enter your personal & professional details</li>
+          <li>Resumebes not store any type of data & image you have enterd so it is totally secure</li>
+          <li>You can design your resume on design part & also new features are coming soon</li>
+          <li>After click on Generating button you can see preview of your resume also Download as PDFs format. User can also edit their details on using edit button.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="aboutsec my-5">
+      <hr>
+      <h3 class="text-center">ABOUT</h3>
+      <hr>
+      <div class="content">
+        <p>Nowdays, Resume is a Required thing for a technical person, fresher student or any employee of the company. So our web app is totally free for any type of person who wants to create their own Resume.</p>
+        <ul>
+          <li>Build a professional resume backed by research with many of employers</li>
+          <li>smart resume templates that highlight your best qualities</li>
+          <li>Print, download and share your resume instantly in flexible formats like PDF and .doc</li>
+          <li>Share your resume with Indeed to easily apply to jobs</li>
+          <li>We are not save any type of personal or professional data of any person,your data only show on your desktop. So it is fast and secure.</li>
+        </ul>
+      </div>
+    </div>
+    </section>
     <!-- form part -->
     <section  id="cvform" class="mycontainer">
       <div class="container flex-display">
@@ -255,7 +288,16 @@
     </div>
     </section>
     
-  
+  <footer>
+    <div class="social-m">
+      <a href=""><i class="fab fa-instagram fa-lg"></i></a>
+      <a href=""><i class="fab fa-twitter fa-lg"></i></a>
+      <a href=""><i class="fab fa-facebook-f fa-lg"></i></a>
+    </div>
+    <div class="msg">
+      <p>&copy; copyrights all right resreved,<span>&hearts;</span> from Aakash Dave</p>
+    </div>
+  </footer>
 
     <!-- Optional JavaScript; choose one of the two! -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

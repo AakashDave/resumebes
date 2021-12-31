@@ -4,12 +4,14 @@ let cvtemplate=document.getElementById('cvtemplate');
 let cvform=document.getElementById('cvform');
 const home=document.getElementById('home');
 const navbar=document.getElementById('navbar');
+const about=document.getElementById('about');
 home.style.display='flex';
 cvform.style.display='none';
 cvtemplate.style.display='none';
 navbar.style.display='block';
 function openedit() {
     home.style.display='none';
+    about.style.display='none';
     cvform.style.display='block';
 }
 
@@ -76,6 +78,7 @@ function generateCV() {
     audio.play();
     cvform.style.display='none';
     cvtemplate.style.display='block';
+    about.style.display='none';
     navbar.style.display='none';
     
     let namefield=document.getElementById('namefield').value;
