@@ -182,7 +182,7 @@ window.onload =function(){
             margin: 1,
             filename: 'myfile.pdf',
             image: { type: 'jpeg' },
-            html2canvas: { dpi: 192, letterRendering: true, width: 1024, height: 1448 * nbPages },
+            html2canvas: {scale:8, dpi: 192, letterRendering: true, width: 1024, height: 1448 * nbPages },
             jsPDF: { unit: 'pt', format: 'a4', orientation: 'portrait' }
           };
           html2pdf().set(opt).from(showtemp).save();
